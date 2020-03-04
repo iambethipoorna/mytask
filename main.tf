@@ -48,7 +48,7 @@ resource "aws_instance" "web" {
 		sudo yum install -y httpd
 		sudo systemctl start httpd
 		sudo systemctl enable httpd
-		echo "<h1>Hello `curl ifconfig.co` </h1>" | sudo tee /var/www/html/index.html
+		echo "<h1>MyIPAddress : `bat -print=b ifconfig.co/ip` </h1>" | sudo tee /var/www/html/index.html
 	EOF
    tags = {
      Name = "MyIPAddress"
