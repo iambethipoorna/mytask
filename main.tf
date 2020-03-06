@@ -28,8 +28,8 @@ resource "aws_security_group" "rsasgroup" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    TeamName = "RSA"
-    Project = "RSAProject"
+    TeamName = "MyTeam"
+    Project = "MyProject"
     Name = "MyTestGroup"
   }
 }
